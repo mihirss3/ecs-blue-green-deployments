@@ -5,13 +5,10 @@ A walkthrough for this example can be found at https://ecsworkshop.com/blue_gree
 #### Table of Contents
 
 * [Outcome](#Outcome)
-* [What are we building?](#what-are-we-building)
+* [What am I building?](#what-are-we-building)
 * [Why do I need this?](#why-do-i-need-this)
-* [What are the pre-requisites?](#what-are-the-pre-requisites)
 * [How can I deploy the stack?](#how-can-i-deploy-the-stack)
 * [Cleanup](#cleanup)
-* [Security](#security)
-* [License](#license)
 
 ## Outcome
 
@@ -35,20 +32,6 @@ ECS blue/ green deployment CDK construct enabling teams to build and deploy pipe
 * Rolling back from the green environment to the blue environment in the event of a problem is easier because you can redirect traffic to the blue environment without having to rebuild it
 * You can incorporate the principle of infrastructure immutability by provisioning fresh instances when you need to make changes. In this way, you avoid configuration drift.
 
-## What are the pre-requisites?
-
-```
-brew install jq
-npm install -g -f aws-cdk@2.50.0
-cd $HOME && mkdir -p environment && cd environment
-git clone https://github.com/aws-containers/ecs-workshop-blue-green-deployments.git
-cd $HOME/environment/ecs-workshop-blue-green-deployments
-```
-* You have configured AWS CLI using `aws configure`
-* You have the set the `AWS_REGION` within `aws configure`
-* The role being used from CLI has the permissions required for resources being created by CDK
-* HTTPS (GRC) is the protocol to use with `git-remote-codecommit` (GRC). This utility provides a simple method for pushing and pulling code from CodeCommit repositories by extending Git. It is the recommended method for supporting connections made with federated access, identity providers, and temporary credentials
-* Install `git-remote-codecommit` with `pip install git-remote-codecommit`
 
 ## How can I deploy the stack?
 
@@ -90,11 +73,3 @@ cd $HOME/environment/ecs-workshop-blue-green-deployments
 cd $HOME/environment/ecs-workshop-blue-green-deployments
 ./bin/scripts/destroy.sh
 ```
-
-# Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-# License
-
-This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
