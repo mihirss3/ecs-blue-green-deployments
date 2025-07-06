@@ -14,7 +14,7 @@ A walkthrough for this example can be found at https://ecsworkshop.com/blue_gree
 
 ECS blue/ green deployment CDK construct enabling teams to build and deploy pipeline for their workloads.
 
-## What are we building?
+## What am I building?
 
 * CodePipeline will be used for executing Blue/Green deployment using CodeCommit, CodeBuild and CodeDeploy
 * The container images will be stored in the Elastic Container Registry
